@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Nowhere to Run</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="grey" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Zombie Data <i class="material-icons">map</i></a>
+      <ul class="right hide-on-med-and-down">
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center red-text">Enter a City's Stats:</h1>
+      <p class="container"><strong>Directions:</strong>
+        <br>
+        Below, enter the information for any city we're currently studying. At
+        the bottom of the page, your chances for survival - based on your data -
+        will be calculated.
+      </p>
+      <form class="col s12" action="index.html" method="post">
+        <div class="container">
+          <h5>City Information</h5>
+          <div class="row">
+            <div class="input-field col s6">
+              <input type="text" id='cityName' name="cityName" class="validate">
+              <label for="cityName">What is the name of the city?</label>
+            </div>
+            <div class="input-field col s6">
+              <input type="text" id="cityPopDensity" name="cityPopDensity" class="validate">
+              <label for="cityPopDensity">What is the population denisty (in sq. miles)?</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input type="text"  id="cityTotalPop" name="cityTotalPop" class="validate">
+              <label for="cityTotPop">What is the total population of the city?</label>
+            </div>
+            <div class="input-field col s6">
+              <input type="text" id="cityElevation" name="cityElevation" class="validate">
+              <label for="cityElevation">What is the elevation of your city?</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input type="text" id="citySurfaceArea" name="citySurfaceArea" class="validate">
+              <label for="citySurfaceArea">What is the surface area (in sq. miles)?</label>
+            </div>
+            <div class="input-field col s6">
+              <input type="text" id="cityEcon" name="cityEcon" class="validate" value="$">
+              <label for="cityEcon">What is the per capita GDP (in USD)?</label>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="row center">
+        <a onclick='results()' id="download-button" class="btn-large waves-effect waves-light orange">Do the math</a>
+      </div>
+      <br><br>
+<div class="container">
+<h5>Results</h5>
+<p id='results'>Your results will display here after clicking the button above.</p>
+</div>
+    </div>
+  </div>
+
+  <footer class="page-footer red accent-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Remember...</h5>
+          <p class="grey-text text-lighten-4">I don't have to be faster than <thead>
+            the zombies, I just have to be faster than <strong>you</strong>.
+          </thead></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Built by <a class="orange-text text-lighten-3" href="#">Rob</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="zombie.js"></script>
+
+  </script>
+
+  </body>
+</html>
